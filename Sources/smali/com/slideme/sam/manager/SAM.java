@@ -10,7 +10,6 @@ import android.os.*;
 
 public final class SAM extends android.app.Application
 {
-{
 	public static final int DEFAULT_APPS_PER_PAGE = 0x1e;
 	public static final boolean DEFAULT_BUG_REPORTING = true;
 	public static final boolean DEFAULT_FREE_APPS = false;
@@ -33,7 +32,7 @@ public final class SAM extends android.app.Application
 	private List <ResolveInfo> launchers = null;
 	private List<PackageInfo> packages = null;
 	private SAMService service;
-}
+	
 	public SAM() 
 	{
 		super();
@@ -89,7 +88,7 @@ public final class SAM extends android.app.Application
 	private void refreshLaunchers()
 	{
 		Intent mainIntent = new Intent("android.intent.action.MAIN");
-		mainIntent.addCategory(android.intent.category.LAUNCHER");
+		mainIntent.addCategory("android.intent.category.LAUNCHER");
 		launchers = getPackageManager().queryIntentActivities(mainIntent,0);
 	}
 	
