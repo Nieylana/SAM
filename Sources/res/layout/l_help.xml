@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:layout_marginTop="10.0dip" android:text="@string/sam_version" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <ScrollView android:id="@id/help" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ff191919"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:textColorLink="@color/link" android:autoLink="all" android:id="@id/help_view" android:padding="10.0dip" android:scrollbars="horizontal|vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="https://slideme.org/user/register" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" />
+    </ScrollView>
+</LinearLayout>

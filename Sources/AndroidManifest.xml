@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="170" android:versionName="4.0" package="com.slideme.sam.manager"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="4" />
+    <application android:label="@string/application_manager" android:icon="@drawable/img_slideme" android:name=".SAM">
+        <meta-data android:name="android.app.default_searchable" android:value=".controller.activities.catalog.CategoryActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/title_application" android:name=".controller.activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/application_manager" android:name=".controller.activities.catalog.CatalogDisplayActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.catalog.CategoryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.BROWSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.SEARCHABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="market" android:host="search" android:path="" />
+                <data android:scheme="sam" android:host="search" android:path="" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/xml_searchable" />
+        </activity>
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.bundle.BundleDisplayActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.bundle.InstallActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.bundle.TermsActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.login.LoginActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.notification.NotificationActivity" />
+        <activity android:name=".controller.activities.bundle.CompatibilityActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.generic.SdCardActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.generic.HelpActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/app_name" android:name=".controller.activities.installer.Installer" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/application_manager" android:name=".controller.activities.notification.ProgressActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.settings.Settings" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.settings.General" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.settings.Networking" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.settings.Debug" />
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/error_reporting" android:name=".controller.activities.debug.LogException" />
+        <activity android:theme="@android:style/Theme.Black" android:label="@string/title_no_matches" android:name=".controller.activities.generic.NoResultsActivity" />
+        <activity android:theme="@android:style/Theme.Black" android:name=".controller.activities.storagelocker.StorageLockerEmptyActivity" />
+        <service android:label="SAM Service" android:name=".model.android.services.SAMService" />
+    </application>
+</manifest>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@id/featured_gallery" android:layout_width="85.0dip" android:layout_height="85.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/gallery_icon" android:layout_width="85.0dip" android:layout_height="85.0dip" />
+</RelativeLayout>

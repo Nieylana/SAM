@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/catalog_highlight" android:background="@drawable/img_groove_highlight" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ProgressBar android:layout_gravity="center_horizontal" android:id="@android:attr/theme" android:layout_width="wrap_content" android:layout_height="60.0dip" style="\?android:attr/progressBarStyleSmall" />
+    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_catalog" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" />
+</LinearLayout>

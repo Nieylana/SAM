@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@id/catalog_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:gravity="center" android:id="@id/catalog_display_gridview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:verticalSpacing="10.0px" android:stretchMode="columnWidth" android:columnWidth="100.0px" android:numColumns="auto_fit" />
+    <ImageView android:id="@id/catalog_background_grad" android:background="@drawable/img_background_grad_320" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/catalog_display_gridview" />
+</RelativeLayout>

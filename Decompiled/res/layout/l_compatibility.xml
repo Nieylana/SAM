@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:id="@id/application_display" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/application_display_scroll" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_x="0.0dip" android:layout_y="35.0dip" android:layout_above="@id/application_display_termsImage">
+        <RelativeLayout android:id="@id/application_display_layout" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_x="0.0dip">
+            <ImageView android:id="@id/application_display_icon" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginRight="5.0dip" android:layout_y="10.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/application_display_displayName" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-15.0dip" android:scrollHorizontally="true" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" android:layout_toRightOf="@id/application_display_icon" />
+            <ImageView android:id="@id/application_display_stars1" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/application_display_icon" android:layout_below="@id/application_display_displayName" />
+            <ImageView android:id="@id/application_display_stars2" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/application_display_stars1" android:layout_below="@id/application_display_displayName" />
+            <ImageView android:id="@id/application_display_stars3" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/application_display_stars2" android:layout_below="@id/application_display_displayName" />
+            <ImageView android:id="@id/application_display_stars4" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/application_display_stars3" android:layout_below="@id/application_display_displayName" />
+            <ImageView android:id="@id/application_display_stars5" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/application_display_stars4" android:layout_below="@id/application_display_displayName" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff20abae" android:id="@id/application_display_v" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" android:layout_toRightOf="@id/application_display_icon" android:layout_below="@id/application_display_stars1" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff20abae" android:id="@id/application_display_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1.0" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" android:layout_toRightOf="@id/application_display_v" android:layout_below="@id/application_display_stars1" />
+            <TableLayout android:id="@id/compatibility_table" android:paddingTop="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stretchColumns="2,3" android:shrinkColumns="4" android:layout_below="@id/application_display_icon"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TableRow>
+                    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/device" android:padding="3.0dip" android:layout_column="2" android:text="@string/current_device" />
+                    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/requirements" android:padding="3.0dip" android:layout_column="3" android:text="@string/requirements" />
+                </TableRow>
+                <View android:background="#ff909090" android:layout_height="2.0dip" />
+                <TableRow>
+                    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/sdkVersion" android:padding="3.0dip" android:layout_column="1" android:text="@string/min_os" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/sdk1" android:padding="3.0dip" android:layout_column="2" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/supported_sdk" android:padding="3.0dip" android:layout_column="3" />
+                    <ImageView android:layout_gravity="right" android:id="@id/min_os" android:padding="3.0dip" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_column="4" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/targetSdkVersion" android:padding="3.0dip" android:layout_column="1" android:text="@string/target_os" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/sdk2" android:padding="3.0dip" android:layout_column="2" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/target_sdk" android:padding="3.0dip" android:layout_column="3" />
+                    <ImageView android:layout_gravity="right" android:id="@id/target_os" android:padding="3.0dip" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_column="4" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/maxSdkVersion" android:padding="3.0dip" android:layout_column="1" android:text="@string/max_os" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/sdk3" android:padding="3.0dip" android:layout_column="2" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/max_sdk" android:padding="3.0dip" android:layout_column="3" />
+                    <ImageView android:layout_gravity="right" android:id="@id/max_os" android:padding="3.0dip" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_column="4" />
+                </TableRow>
+                <TableRow>
+                    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/locales" android:padding="3.0dip" android:layout_column="1" android:text="@string/locale" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/device_locale" android:padding="3.0dip" android:layout_column="2" />
+                    <TextView android:textSize="11.0sp" android:gravity="center" android:id="@id/supported_locales" android:padding="3.0dip" android:maxWidth="7.0dip" android:layout_column="3" />
+                    <ImageView android:layout_gravity="right" android:id="@id/locale" android:padding="3.0dip" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_column="4" />
+                </TableRow>
+            </TableLayout>
+            <TextView android:textColor="@android:color/white" android:id="@id/message" android:paddingLeft="3.0dip" android:paddingTop="10.0dip" android:paddingRight="3.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowDx="0.0" android:shadowDy="1.1" android:shadowRadius="0.8" android:layout_below="@id/compatibility_table" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

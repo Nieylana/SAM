@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.slideme.sam.manager.controller.activities.settings.SPNetworking android:id="@id/maxconnectionsId" android:title="@string/title_settings_network_connection_timeout" android:key="@string/key_settings_network_connection_timeout" />
+</PreferenceScreen>

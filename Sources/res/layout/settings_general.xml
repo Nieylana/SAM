@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.slideme.sam.manager.controller.activities.settings.SPGeneral android:id="@id/appsperpageId" android:title="@string/title_settings_general_apps_per_page" android:key="@string/key_settings_general_apps_per_page" />
+    <CheckBoxPreference android:title="@string/title_settings_general_free_apps" android:key="@string/key_settings_general_free_apps" android:summary="@string/summary_settings_general_free_apps" />
+    <ListPreference android:entries="@array/listScreenshots" android:id="@id/x_screenshots" android:title="@string/title_settings_general_x_screenshots" android:key="@string/key_settings_general_x_screenshots" android:summary="@string/summary_settings_general_x_screenshots" android:entryValues="@array/listScreenshotsVal" />
+</PreferenceScreen>
